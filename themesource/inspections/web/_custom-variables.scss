@@ -1,0 +1,79 @@
+//== Gray Shades
+//## Different gray shades to be used for our variables and components
+$gray-darker:                                       #222222;
+$gray-dark:                                         #333333;
+$gray:                                              #555555;
+$gray-light:                                        #888888;
+$gray-primary:                                      #D7D7D7;
+$gray-lighter:                                      #EEEEEE;
+
+//== Step 1: Brand Colors
+$brand-default:                                     #fff;
+$brand-primary:                                     #4e73df;
+$brand-inverse:                                     #858796;
+$brand-info:                                        #36b9cc;
+$brand-success:                                     #1cc88a;
+$brand-warning:                                     #f6c23e;
+$brand-danger:                                      #e74a3b;
+
+// Used for other variables
+$default-border-color:                              $gray-primary;
+
+//== Step 3: Typography
+$font-family-import:                                "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
+@if $font-family-import != false {
+    // Only import, if the import is set
+    @import url($font-family-import);
+}
+$font-family-base:                                  "Open Sans", sans-serif;
+$font-base-size:                                    14px;
+$font-base-color:                                   #555;
+$link-color:                                        $brand-primary;
+$font-size-h1:                                      31px;
+$font-size-h2:                                      26px;
+$font-size-h3:                                      24px;
+$font-size-h4:                                      18px;
+$font-color-detail:                                 $gray-light;
+$font-color-headers:                                #555;
+
+//== Step 2: UI Customization
+
+// Topbar
+$topbar-bg:                                         $brand-primary;
+$navtopbar-border-color:                            $default-border-color;
+$topbar-border-color:                               $navtopbar-border-color;
+$topbar-minimalheight:                              60px;
+$navtopbar-color:                                   #fff;
+$navbar-brand-name:                                 $default-border-color;
+$brand-logo:                                        false;
+$brand-logo-height:                                 30px;
+$brand-logo-width:                                  30px;
+
+// Sidebar
+$sidebar-bg:                                        $brand-default;
+$navsidebar-color:                                  #ccc;
+$navsidebar-color-hover:                            $navsidebar-color;
+
+// Backgrounds
+$bg-color:                                          #FFFFFF;
+$bg-color-secondary:                                #F5F8FD;
+
+// == Old variables used in theme customizer to the new lib variables
+$font-size-default:                                 $font-base-size;
+$font-color-default:                                $font-base-color;
+$border-color-default:                              $default-border-color;
+$font-color-header:				                    $font-color-headers;
+$m-header-height:                    	            54px;
+$m-header-bg:                                       $topbar-bg;
+$m-header-color:                                   #fff;
+$m-header-title-size:                               17px;
+
+
+//== Settings
+//## Enable or disable your desired framework features
+// Use of !important
+$important-flex:                                    true; // ./base/flex.scss
+$important-spacing:                                 true; // ./base/spacing.scss
+$important-helpers:                                 true; // ./helpers/helperclasses.scss
+
+

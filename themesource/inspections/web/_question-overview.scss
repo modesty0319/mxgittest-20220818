@@ -1,0 +1,311 @@
+.questions{
+    .date{
+        .form-control{
+            text-align: center;
+            max-width: 80%;
+            margin: 0 auto;
+            border: none;
+            border-bottom: solid 2px #0595db;
+            border-radius: 0px;
+            &:focus{
+                -webkit-box-shadow: none;
+                box-shadow:none;
+                
+            }
+        }
+    }
+
+    li{
+        padding:0px !important;
+        .question-content{
+            padding:15px;
+        }
+        h4{
+            text-align: center;
+        }
+        margin-bottom:15px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    .rc-slider-mark{
+        &:first-child{
+                margin-left: -3px !important;
+                left: 0%;
+                text-align: left;
+        }
+        .rc-slider-mark-text{
+            width:46% !important;
+            text-align: right;
+
+        }
+    }
+    .radiobuttons{
+        margin: 10px 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        label{
+            vertical-align: middle;
+        }
+        .radio-inline{
+            width:50%;
+            display: inline-block;
+            margin:0px;
+            text-align: center;
+        }
+         input{
+                :before{
+                    background:$brand-primary;
+                    width:100%;
+                    height:30px;
+                }
+            }
+            input[type="radio"]:checked{
+               :before{
+                    background:$brand-primary;
+                    width:100%;
+                    height:30px;
+                }
+                
+        }
+
+    }
+    .height{
+        div{
+            input{
+                display:inline-block;
+                width:65%;
+                border-radius: 4px 0px 0px 4px; 
+                border-right:0px;
+            }
+            &::after{
+                // height:40px;
+                content:'inch';
+                background:#eee;
+                padding: 6px 8px;
+                font-size: 16px;
+                border-radius: 0px 4px 4px 0px;
+                border: 1px solid #DDD;
+                display:inline-block;  
+                width:35%;             
+            }
+        }
+
+    }
+    .weight{
+        div{
+            input{
+                display:inline-block;
+                width:70%;
+                border-radius: 4px 0px 0px 4px; 
+                border-right:0px;
+            }
+            &::after{
+
+                // height:40px;
+                content:'lbs';
+                background:#eee;
+                padding: 6px 8px;
+                font-size: 16px;
+                border-radius: 0px 4px 4px 0px;
+                border: 1px solid #DDD;
+                display:inline-block;  
+                width:30%;             
+            }
+        }
+    }
+    .bmi{
+        label{
+            display:none;
+        }
+        input{
+            background:none;
+            border:none;
+            text-align: center;
+            font-size: 20px;
+            &:focus{
+                border:none;
+                background: none;
+            }
+        }
+    }
+
+
+
+    .height,.weight{
+        label{
+            margin:0px;
+            padding:0px;
+        }
+    }
+    .question-number{
+        font-weight: bold;
+        color:#000;
+        font-size:40px;
+        text-decoration: underline;
+        -moz-text-decoration-color: $brand-primary;
+        -webkit-text-decoration-color: $brand-primary;
+    
+    }
+    .question-of{
+        font-size:25px;
+        color:$gray;
+    }
+    .question{
+        font-size:20px;
+        margin:20px 0px;
+    }
+
+    .text{
+        .mx-textarea-input{
+            width:80%;
+            font-size: 2em;
+        }
+    }
+    .integer{
+        input{
+            width:50%;
+        }
+    }
+
+    .integer, .text{
+        input,.mx-textarea-input{
+            border:none;
+            border-bottom:solid 2px $brand-primary;
+            border-radius: 0px;
+            
+            margin:0 auto;
+            font-size: 40px;
+            text-align: center;
+            &:focus{
+                -webkit-box-shadow: none;
+                box-shadow:none;
+            }
+
+        }
+       
+    }
+    .rc-slider-dot:last-child, .rc-slider-dot:first-child{
+        display:none;
+
+    }
+    .rc-slider-mark-text{
+            font-size: 15px;
+            padding-top: 5px;
+    }
+    .rc-slider-rail{
+        height:15px;
+    }
+    .rc-slider-step{
+        height:15px;
+    }
+    .rc-slider-track{
+        height:15px;
+    }
+    .rc-slider-handle{
+        width:25px;
+        height:25px;
+    }
+
+    .sub-questions{
+        padding: 15px !important;
+        background: #eee;
+        .mx-list .mx-listview-item{
+            border:none;
+            box-shadow: none;
+            padding: 10px 15px !important;
+
+        }
+    }
+
+
+}
+.tasks{
+    h3{
+        margin-top:10px;
+    }
+    
+}
+.description{
+    padding: 10px 15px 10px 15px;
+}
+
+
+.icon-not-checked{
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-color: rgba(0,0,0,0.26);
+    float: right;
+}
+
+.icon-checked{
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: 2px solid $brand-success;
+    float: right;
+    display: block;
+    &:before {
+        content: '';
+        height: 5px;
+        background-color: $brand-success;
+        position: relative;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 9px;
+        margin-left: -10px;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &:after {
+        content: '';
+        height: 5px;
+        background-color: $brand-success;
+        position: relative;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        margin-left: -8px;
+        margin-top: -8px;
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+.severelyObese{
+    h3{
+        color:$brand-danger;
+    }
+}
+.obese{
+    h3{
+        color:$brand-warning;
+    }
+    
+}
+.overweight{
+    h3{
+        color:yellow;
+    }
+}
+.optimal{
+    h3{
+        color:$brand-success;
+    }
+    
+}
+.underweight{
+    h3{
+        color:$brand-warning;
+    }
+    
+}
+.severlyUnderweight{
+    h3{
+        color:$brand-danger;
+    }
+    
+}

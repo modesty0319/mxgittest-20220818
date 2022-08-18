@@ -1,0 +1,20 @@
+.user-container-left{
+    background:$brand-primary;
+    padding: 10px 30px;
+    img{
+        max-width:100px !important;
+        margin:0 auto;
+    }
+    h3{
+        color:#fff;
+    }
+    li{
+        background:transparent !important;
+        border:none !important;
+
+    }
+    .mx-listview-loadMore{
+        display:none !important;
+
+    }
+}

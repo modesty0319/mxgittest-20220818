@@ -1,0 +1,376 @@
+.btn-start, .btn-view {
+    display: inline-block !important;
+    font-size: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin: 6px 6px 6px;
+    padding: 6px 28px;
+}
+.btn{
+
+}
+//== Phone specific 
+//-------------------------------------------------------------------------------------------------------------------//
+.profile-phone {
+    .btn,
+    .mx-link {
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        &:active {
+            -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+        }
+    }
+}
+
+.btn-nav{
+    &:before{
+        font-family: "streamline-24px";
+        font-size: 20px;
+        font-weight: bold;
+        color: $header-text-color;
+    }
+    &+.btn-nav{
+        margin-left: 24px;
+    }
+}
+
+.btn-appointment{
+ &:before{
+    content: "\e31e";
+ }
+}
+.btn-patient{
+    &:before{
+       content: "\e158";
+    }
+}
+.btn-notification{
+    &:before{
+       content: "\e3bb";
+    }
+}
+.btn-more{
+    &:before{
+       content: "\e473";
+    }
+}
+
+.btn-calendar{
+    @extend .icon-calendar-1;
+}
+
+.btn-search{
+    @extend .icon-magnifier;
+    padding: 0px;
+    background: none;
+    border: none;
+    outline:none;
+    box-shadow: none;
+    width:$m-header-height;
+    height:$m-header-height;
+    &:active:focus{
+        outline:none;
+    }
+    &:hover,&:focus{
+        background:none;
+        outline:none;
+
+    }
+}
+
+.btn-toggle{
+  color: $navtopbar-color;
+  padding: 0;
+    cursor: pointer;
+    width:54px;
+    height:54px;
+  &:before{
+     content: "";
+     background-image: url("./resources/hamburger.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     display: block;
+     height: 54px;
+     width: 70%;
+     margin:0 auto;
+   }
+
+}
+
+.btn-back {
+    color: #fff;
+    padding: 0;
+    cursor: pointer;
+    width: $m-header-height;
+    height: $m-header-height;
+    text-align: center;
+    &:before{
+        width:50%;
+        margin:0 auto;
+    }
+    &:hover, &:focus{
+        color:#fff;
+    }
+  &:before{
+   }
+}
+
+.fixed-action-btn{
+  a.btn-large{
+      &:hover, &:focus, &.active{
+          background: darken(#76ca02, 5%) !important;
+      }
+      text-decoration: none;
+      i{
+          position: absolute;
+          background: 0 0;
+          top: calc((54px - 3px)/2);
+          left: calc((54px - 25px)/2);
+          &.plus{
+              &:after, &:before{
+                  -webkit-transition-duration: .3s;
+                  transition-duration: .3s;
+                  -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+                  -webkit-transition-property: -webkit-transform;
+                    transition-property: transform;
+              }
+              &:after{
+                  content: "";
+                  background: #fff;
+                  height: 3px;
+                  width: 25px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: block;
+              }
+              &:before{
+                  content: "";
+                  background: #fff;
+                  height: 25px;
+                  width: 3px;
+                  position: absolute;
+                  top: -11px;
+                  left: 11px;
+                  display: block;
+              }
+          }
+          &.hamburger{
+              -webkit-transition: background 0s .3s;
+              transition: background 0s .3s;
+              &:before, &:after{
+                  content: "";
+                  background: #fff;
+                  height: 3px;
+                  width: 25px;
+                  position: absolute;
+                  display: block;
+                  -webkit-transition-duration: .3s, .3s;
+                  transition-duration: .3s, .3s;
+                  -webkit-transition-delay: .3s, 0s;
+                  transition-delay: .3s, 0s;
+              }
+              &:before{
+                top: -8px;
+                -webkit-transition-property: top, -webkit-transform;
+                transition-property: top, transform;
+              }
+              &:after{
+                bottom: -8px;
+                -webkit-transition-property: bottom, -webkit-transform;
+                transition-property: bottom, transform;
+              }
+          }
+
+      }
+
+  }
+  &.active{
+    a.btn-large{
+        background: darken(#76ca02, 5%) !important;
+        i{
+            &.plus{
+                &:after{
+                    @include rotate(135deg);
+                }
+                &:before{
+                    @include rotate(135deg);
+                }
+            }
+            &.hamburger{
+                background: 0 0;
+                &:before, &:after{
+                    -webkit-transition-delay: 0s, .3s;
+                    transition-delay: 0s, .3s;
+                }
+                &:before{
+                    top: 0;
+                    @include rotate(45deg);
+                }
+                &:after{
+                    bottom: 0;
+                    @include rotate(-45deg);
+                }
+            }
+        }
+    }
+  }
+}
+.synchronise-btn{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0px;
+}
+
+.btn-swipe{
+  font-size: 14px;
+  span{
+      display: block;
+      font-size: 20px;
+  }
+  .glyphicon{
+    @extend .fi;
+    position: relative;
+    top: -2px;
+    &.glyphicon-phone{
+       @extend .flaticon-sms-bubble-speech;
+    }
+    &.glyphicon-earphone{
+      @extend .flaticon-phone-call-button;
+    }
+    &.glyphicon-map-marker{
+       @extend .flaticon-map-placeholder;
+    }
+  }
+}
+
+.btn-reveal{
+position: relative;
+cursor: pointer;
+  right: -40px;
+  top: -5px;
+  &:hover,&:focus{
+      outline:none !important;
+  }
+}
+
+.btn-search{
+    margin:0px;
+
+
+}
+
+.btn-card{
+    font-size: 14px;
+    text-align: center;
+    width: calc(100% / 3);
+    //min-height: 51px;
+    padding: calc((46px - 26px)/2) 0;
+    &:last-child{
+        border-right: 0;
+    }
+    .mx-link,.btn{
+        font-size: 0px;
+        color: #747474;
+        cursor: pointer;
+        color:transparent;
+        &:before{
+            font-size: 24px;
+            color: #747474;
+        }
+        a, text{
+            text-decoration: none !important;
+            display: none;
+        }
+        &:hover, &:focus{
+            color: #424242;
+        }
+    }
+    .btn{
+        padding:0px;
+    }
+}
+.right-buttons{
+    width: 150px;
+}
+.btn-start, .btn-view{
+    display:inline-block !important;
+    font-size: 15px;
+    //width: 120px;
+    margin: 6px 6px 6px;
+    padding: 6px 28px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    //@extend .btn-transparent;
+}
+.btn-view{
+    padding: 6px 32px;
+}
+.appointment-navigation-buttons{
+    //padding: 6px;
+    .start-button-container{
+        display:inline-block;
+    }
+    .right-buttons{
+        display:inline-block;
+        position: absolute;
+        right: 0;
+
+    }
+}
+
+.btn-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    transition: box-shadow .25s;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.btn-boxshadow{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.btn-50{
+    width:50%;
+    float:left;
+    display:block;
+    border-radius: 0px;
+
+}
+
+.btn-camera{
+    background:none;
+    color:#555;
+    border:none;
+    display:flex;
+    font-size: 100px;
+    width:100%;
+    &:hover,&:focus{
+        border:none;
+        background:none;
+        color:darken(#555,10%);
+
+    }
+}
+.btn-transparent, .btn-transparent:hover, .btn-transparent:focus {
+    border-style: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+.flaticon-chat-bubble, .flaticon-photo-library, .flaticon-camera{
+    .glyphicon{
+        display: none;
+    }
+}

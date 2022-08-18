@@ -1,0 +1,33 @@
+//== Phone specific 
+//-------------------------------------------------------------------------------------------------------------------//
+.profile-phone .mx-listview {
+    .mx-listview-searchbar {
+        margin-bottom: 3px;
+        background: #FFFFFF;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+        input {
+            padding: 14px 15px;
+            color: #555555;
+            border-style: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+    .mx-listview-clear-button {
+        padding: 14px 15px;
+        color: inherit;
+        border-style: none;
+    }
+    li {
+        &:first-child {
+            // border-top: none;
+        }
+    }
+}
+.datasets{
+    img{
+        max-width:150px;
+        margin: 0 auto;
+        
+    }
+}

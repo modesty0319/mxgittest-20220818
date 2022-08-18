@@ -1,0 +1,495 @@
+/* ==========================================================================
+   Cards
+
+========================================================================== */
+
+//== Elements
+//-------------------------------------------------------------------------------------------------------------------//
+.card-title {
+    margin-top: 0;
+}
+
+//== Variations
+//-------------------------------------------------------------------------------------------------------------------//
+.cardaction {
+    .card-image {
+        .glyphicon {
+            font-size: 58px;
+        }
+    }
+}
+
+.cardmetrics {
+    .card-title {
+        margin-bottom: 0;
+    }
+    .figurecontent {
+    }
+    .card-image {
+        width: 100px;
+        height: auto;
+        // If btn
+        &.btn {
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            cursor: default;
+            pointer-events: none;
+            font-size: 40px;
+        }
+    }
+    .card-counter {
+        margin: 0;
+        font-size: 64px;
+    }
+    .card-morebutton {
+    }
+}
+
+.cardinfo {
+    .card-text {
+        margin-bottom: $spacing-large;
+    }
+}
+// Used in card info
+.textwithicon {
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 15px;
+    text-overflow: ellipsis;
+    .textwithicon-icon,
+    .textwithicon-text {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .textwithicon-icon {
+        margin-right: 15px;
+        padding: 0;
+        color: $brand-primary; // class .text-primary
+        border: 0;
+        background: transparent;
+        font-size: 23px;
+    }
+    .textwithicon-text {
+    }
+}
+
+// Used in card info
+.socialprofiles {
+    .socialprofiles-title {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold; // class text-bold
+    }
+    .socialprofiles-button {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+        padding: 0;
+        border-radius: 24px;
+        .glyphicon {
+            margin: 0;
+        }
+    }
+}
+
+
+.cardtabs {
+    padding: 0;
+    .cardtabs-tabs {
+        margin: 0;
+        ul.mx-tabcontainer-tabs {
+            display: flex;
+            margin: 0;
+            background-color: mix($tabs-border-color, #FFFFFF, 20%);
+
+            li {
+                flex: 1 1 auto;
+                text-align: center;
+                a,
+                a:hover,
+                a:focus {
+                    border-top-width: 0;
+                    border-right-width: 1px;
+                    border-left-width: 0;
+                }
+                &:first-child a {
+                    border-radius: $border-radius-default 0 0 0;
+                }
+                &:last-child a {
+                    border-radius: 0 $border-radius-default 0 0;
+                }
+            }
+        }
+        .mx-tabcontainer-pane {
+            // @include get-responsive-spacing-large($type: padding, $direction: all);
+        }
+    }
+}
+
+.carduser {
+    .card-controls {
+    }
+    .card-title {
+    }
+    .card-detail {
+    }
+}
+
+.cardgraph {
+    .card-title {
+    }
+}
+
+.cardchart {
+    .card-title {
+    }
+}
+
+.cardproduct {
+    padding: 0;
+    .cardproduct-header {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+        .cardproduct-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 30px;
+            background: rgba(0, 0, 0, 0.60);
+
+            .cardproduct-overlay-category,
+            .cardproduct-overlay-title {
+                margin: 0;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .cardproduct-footer {
+        position: relative;
+        padding: 20px 30px;
+        .cardproduct-name {
+            margin: 0;
+        }
+        .widget-star-rating-font {
+            font-size: 20px;
+        }
+        .cardproduct-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 30px;
+            border-left: 1px solid $border-color-default;
+        }
+    }
+}
+
+.cardproduct2 {
+    @extend .cardproduct;
+    .cardproduct-header {
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            padding: 20px 30px;
+            content: "";
+            background: rgba(0, 0, 0, 0.60);
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 2%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+        }
+    }
+}
+
+
+.cardproduct3 {
+    @extend .cardproduct;
+
+    .cardproduct-header {
+        height: 320px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cardproduct-overlay {
+            min-height: 100px;
+            padding: 30px;
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(250, 250, 250, 0) 8%, rgba(0, 0, 0, 0.99) 121%, rgba(0, 0, 0, 1) 100%);
+            font-size: $font-size-default;
+        }
+    }
+}
+
+.cardshopping {
+}
+
+.carduserlist {
+}
+
+.cardstatus {
+    padding: 20px;
+    .card-linkicon {
+        font-size: 30px;
+    }
+    .cardstatus-status {
+        margin-bottom: 5px;
+    }
+}
+
+.cardpayment {
+}
+
+.cardprogress {
+    .cardprogress-state {
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        cursor: default;
+        pointer-events: none;
+        border-radius: 100%;
+        font-size: 28px;
+    }
+}
+
+.cardhighlight {
+    border-top: 4px solid $brand-primary;
+    padding-bottom:15px !important;
+    .card-title{
+        margin-top:20px !important;
+        margin-bottom:20px !important;
+    }
+}
+
+/* ==========================================================================
+   Card
+========================================================================== */
+.card {
+	position: relative;
+	padding: 0 16px;
+	margin: 0 0 5px 0;
+	border-right: 0px;
+	border-left: 0px;
+	background-color: #FFF;
+	border-radius: 0px;
+	transition: box-shadow .25s;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);;
+  @include clear;
+	&.card-nopadding{
+		padding: 0;
+		.card-header{
+			padding: 0 16px;
+		}
+	}
+}
+.card-header{
+    margin: 15px 0;
+
+}
+.card-maps {
+	padding: 0;
+}
+
+/* Title + button + border below title and button */
+.card-header-action {
+	overflow: hidden;
+	margin-bottom: 20px;
+	.card-title {
+		float: left;
+	}
+	.btn {
+		float: right;
+	}
+}
+.card-details {
+	padding: 10px;
+}
+.card-title {
+	margin-top: 0;
+
+	@media only screen and (max-width: 1024px) {
+		font-size: 18px;
+	}
+}
+.card-subtitle {
+	//font-size: 14px;
+	margin-bottom: 10px;
+}
+.card-annotation {
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	padding-bottom: 10px;
+}
+.card-icon {
+	border-radius: 50%;
+	margin: 30px auto;
+	width: 125px;
+	height: 125px;
+
+	@media (max-width: $screen-md) {
+		width: 75px;
+  		height: 75px;
+	}
+
+	.glyphicon {
+		font-size: 60px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@media (max-width: $screen-md) {
+			font-size: 28px;
+		}
+	}
+}
+.card-image {
+	margin: 30px auto;
+}
+.card-user-image {
+	border: 4px solid #FFF;
+}
+.card-link {
+	font-size: $font-size-small;
+}
+
+.card-action{
+	position: relative;
+	background-color: #eee;
+	border-top: 1px solid rgba(160,160,160,0.2);
+    min-height: 45px;
+    z-index: 2;
+	//padding: 16px;
+	*{
+		display: inline-block;
+	}
+
+}
+
+.card-content{
+    padding: 16px;
+    z-index: 2;
+    position: relative;
+    background: #fff;
+    &.card-content-small{
+        padding: 8px 16px;
+    }
+}
+
+.card-reveal{
+	padding: 16px;
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	overflow-y: auto;
+	left: 0;
+	top: 100%;
+	height: 80%;
+	z-index: 3;
+	display: none;
+	transform: translateY(0);
+	&.reveal{
+		display: block;
+		transform: translateY(-100%);
+	}
+}
+
+.card-title{
+	display: block;
+	padding-bottom: 2px;
+	//font-size: 20px;
+	line-height: 20px;
+}
+
+.card-subtitle{
+	margin-bottom: 0;
+	*{
+		font-size: 14px;
+		display: inline;
+		color: rgba(0, 0, 0, 0.54);
+	}
+	label, span{
+		margin-right: 24px;
+	}
+}
+
+.card-fab{
+	.fixed-action-btn{
+		position: absolute;
+		bottom: 45px;
+		a.btn-large{
+			i{
+				position: relative;
+				background: 0 0;
+				text-align: center;
+				left: 15px;
+				top: -7px;
+			}
+		}
+	}
+}
+
+.card-content-top{
+	border-bottom:solid 2px #EEE;
+	border-top:solid 2px #EEE;
+}
+
+.card-btn{
+    padding: 8px;
+}
+.card.card-without-padding{
+    padding:0px;
+}
+.next-appointment{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+   .header{
+        padding:10px 0px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    .main-card-image{
+
+        // border-top:1px solid rgba(160, 160, 160, 0.2);
+        background:#eee;
+        margin: 4px 0px 0px 0px;
+        img{
+            max-width:100%;
+            margin:0 auto;
+        }
+
+
+    }
+}
+.card-border{
+    position: relative;
+	padding: 15px;
+    margin: 0px;
+    border: solid 1px $border-color-default;
+    margin: 0px 0px 5px 0px;
+	background-color: #FFF;
+	border-radius: 4px;
+	transition: box-shadow .25s;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.default{
+    @extend .fi;
+    @extend .flaticon-tick-inside-circle;
+    color:$brand-success;
+    font-size:25px;
+    padding: 0px;
+}
